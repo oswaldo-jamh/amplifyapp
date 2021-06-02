@@ -1,10 +1,20 @@
 {
-  "auth": {
-    "amplifybackend2555bba1": {
-      "service": "Cognito",
+  "api": {
+    "amplifybackend": {
+      "service": "AppSync",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7,
+              "description": "demo"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
     }
   }
 }
